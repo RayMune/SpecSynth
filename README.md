@@ -1,10 +1,34 @@
-# SpecSynth
+# Project Verify
 
-This SpecSynth hackathon project is a React-based frontend for generating and comparing formal specifications from code or documentation using AI models. The project uses a Vite app in `spec-synth`, while `file.jsx` contains the core prompt templates and model API logic.
+Project Verify is a research-oriented React app that explores specification elicitation and validation workflows for code, documentation, and informal requirements. The current implementation is a Vite app inside `spec-synth`, and `file.jsx` contains the main prompt generation and AI integration logic.
+
+## Core focus
+
+Project Verify centers on two related capabilities:
+
+1. Specification Elicitation
+
+   Tools that pull formal specifications out of ambiguous sources: documentation, legacy code, requirements docs, conversations with domain experts, and informal descriptions.
+
+   The project aims to demonstrate structured editors, GUIs, and pipelines that translate informal intent into formal artifacts such as Lean-style specifications.
+
+   Example projects:
+
+   - A Coq/Lean spec drafting assistant that turns a natural-language requirement into a candidate specification, with reviewer tooling for the human in the loop.
+   - An IDE extension that surfaces hidden assumptions in a legacy C codebase.
+
+2. Specification Validation
+
+   Methods that check whether a candidate specification actually captures the system's intended behavior. This includes testing, cross-checking, mutation, and formal validation.
+
+   Example projects:
+
+   - A property-based fuzzing harness that flags specs which underconstrain or overconstrain the system.
+   - Cross-model spec comparison: generate two spec candidates from different LLMs, surface where they disagree.
 
 ## Overview
 
-The application is designed to:
+The current app is designed to:
 
 - Build elicitation prompts that ask an AI model to extract formal specifications from input.
 - Compare multiple AI outputs and synthesize a consensus response.
